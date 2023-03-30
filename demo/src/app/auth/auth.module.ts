@@ -6,7 +6,6 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import  { SharedModule } from '../shared/shared.module';
 import { EffectsModule } from '@ngrx/effects';
-//import { AuthEffects } from '../auth.effects';
 import { StoreModule } from '@ngrx/store';
 import { authFeatureKey, reducer } from './state/auth.reducer';
 

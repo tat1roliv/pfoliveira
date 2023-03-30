@@ -16,17 +16,6 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-/*
-  login(user: User){
-    let session: Session = {
-      sessionActive: true,
-      userActive: user
-    }
-
-    this.session.createSession(session)
-  }
-*/
-
 login(user: User): Observable<Session>{
   return this.http.get<User[]>(`${env.authURL}/users`).pipe(
     map((users: User[]) => {
