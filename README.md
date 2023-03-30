@@ -5,13 +5,13 @@
  json-server --watch ./src/assets/db.json
 
 /*ADMIN PROFILE*/
-UserName:: admin,
+UserName: admin,
 Email: admin@mail.com,
-Password:: 1234,
+Password: 1234,
 Admin: true
 
 /*USER PROFILE*/
-UserName:: ada,
+UserName: ada,
 Email: ada@mail.com,
-Password:: root,
+Password: root,
 Admin: false
