@@ -21,7 +21,6 @@ export class StudentsEditarComponent implements OnInit{
   studentsTemp$!: Observable<Student[]>;
 
   constructor(
-    //public activatedRoute: ActivatedRoute,
     private studentsService: StudentsService,
     private router: Router,
     private dialogRef: MatDialogRef<StudentsEditarComponent>,
@@ -53,11 +52,6 @@ export class StudentsEditarComponent implements OnInit{
     this.store.dispatch(editStudentState({student: student}));
     this.dialogRef.close(student);
 
-    /*
-    this.studentsService.editServStudent(student).subscribe((student: Student) =>{
-      this.dialogRef.close(student);
-    })
-    */
 
   }
 
