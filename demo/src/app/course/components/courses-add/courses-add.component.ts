@@ -44,12 +44,6 @@ export class CoursesAddComponent  implements OnInit{
 
     this.store.dispatch(addCourseState({ course: course }));
 
-    /*
-    this.coursesService.addCourse(course).subscribe((course: Course) => {
-      alert(`course ${course.courseName} added` );
-      this.router.navigate(['courses/list']);
-    })
-    */
   }
 
 

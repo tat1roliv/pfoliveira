@@ -20,7 +20,6 @@ export class CoursesEditComponent implements OnInit{
   coursesList$!: Observable<Course[]>;
 
   constructor(
-    //public activatedRoute: ActivatedRoute,
     private coursesService: CourseService,
     private router: Router,
     private dialogRef: MatDialogRef<CoursesEditComponent>,
@@ -47,10 +46,5 @@ export class CoursesEditComponent implements OnInit{
     this.store.dispatch(editCourseState({course: course}));
     this.dialogRef.close(course);
 
-    /*
-    this.coursesService.editServCourse(course).subscribe((course: Course) =>{
-      this.dialogRef.close(course);
-    })
-    */
   }
 }

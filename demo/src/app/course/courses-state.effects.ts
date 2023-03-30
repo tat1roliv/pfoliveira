@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable, EMPTY } from 'rxjs';
 import { Router } from "@angular/router";
-
 import { concatMap, map } from "rxjs";
 import { Course} from "src/app/models/course";
 import { loadCoursesStates, loadedCourses } from "./courses-state.actions";
 import { CourseService } from "./services/course.service";
-import { MatSnackBar } from '@angular/material/snack-bar';
 import * as CoursesStateActions from './courses-state.actions';
 
 
@@ -74,6 +72,5 @@ export class CoursesStateEffects {
     private courses: CourseService,
     private actions$: Actions,
     private router: Router,
-    private snackBar: MatSnackBar
   ) {}
 }

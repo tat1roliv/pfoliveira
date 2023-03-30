@@ -42,12 +42,6 @@ export class CoursesListComponent implements OnInit, OnDestroy {
 
     this.store.dispatch(loadCoursesStates());
 
-    /*
-    this.coursesService.getCoursesObservable().subscribe((courses: Course[]) => {
-      this.store.dispatch(loadedCourses({ courses: courses }));
-    });
-    */
-
     this.coursesList$ = this.store.select(selectLoadedCourses);
 
     this.coursesService.getCoursesObservable();
@@ -58,16 +52,9 @@ export class CoursesListComponent implements OnInit, OnDestroy {
    removeCourse(course: Course): void {
 
     this.store.dispatch(removeCourseState({ course }));
-    /*
-     this.coursesService.removeCourse(course).subscribe((course: Course) => {
-      alert(`course ${course.courseName}  deleted` );
-      this.coursesList$ = this.coursesService.getCoursesObservable();
-     })
-     */
+
    }
 
-
-  //updated to dialog
    editCourseRedirect(course: Course){
      this.router.navigate(['courses/edit', course])
    }
