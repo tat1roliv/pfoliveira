@@ -5,7 +5,7 @@
 
   <div class="row" mat-dialog-content>
 
-      <form [formGroup]="formStudents"><!-- (ngSubmit)="studentsEdit()" -->
+      <form [formGroup]="formStudents">
         <fieldset disabled>
           <div class="mb-2">
               <label class="mb-1" for="disabledTextInput">Id (not editable): </label>
@@ -27,11 +27,7 @@
           <div class="mb-2">
             <label class="mb-1" for="course-input">Course:</label>
             <input value="" type="text" id="course-input" name="course-input" class="form-control"  formControlName="course">
-
           </div>
-          <!--div class="mt-4 mb-2">
-              <button type="submit" class="btn btn-primary px-5">Save</button>
-          </!--div-->
       </form>
         <div class="mt-4 mb-2">
             <button type="submit" class="btn btn-primary px-5" (click)="studentsEdit()">Save</button>

@@ -48,13 +48,6 @@ export class StudentsAddComponent  implements OnInit{
 
     this.store.dispatch(addStudentState({ student: student }));
 
-    /*
-    this.studentsService.addStudent(student).subscribe((student: Student) => {
-      alert(`student ${student.name} ${student.lastName} added` );
-      this.router.navigate(['students/list']);
-    })
-    */
-
   }
 
 }

@@ -3,13 +3,10 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable, EMPTY } from 'rxjs';
 import * as StudentsStateActions from './students-state.actions';
 import { Router } from "@angular/router";
-
 import { concatMap, map } from "rxjs";
 import { Student } from "src/app/models/student";
 import { loadStudentsState, loadedStudents } from "./students-state.actions";
 import { StudentsService } from "./services/students.service";
-//import { MatSnackBar } from '@angular/material/snack-bar';
-
 
 @Injectable()
 export class StudentsStateEffects {
@@ -74,6 +71,5 @@ export class StudentsStateEffects {
     private students: StudentsService,
     private actions$: Actions,
     private router: Router,
-    //private snackBar: MatSnackBar
   ) {}
 }

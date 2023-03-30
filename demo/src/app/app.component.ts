@@ -8,8 +8,6 @@ import { SessionService } from './core/services/session.service';
 import { Session } from './models/session';
 import { User } from './models/user';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,7 +15,6 @@ import { User } from './models/user';
 })
 export class AppComponent implements OnInit {
   title = 'demo';
-  //session$!: Observable<Session>
   sessionActive$!: Observable<Boolean>;
   userActive$!: Observable<User | undefined>;
 
@@ -28,7 +25,6 @@ export class AppComponent implements OnInit {
      ){ }
 
   ngOnInit(): void {
-      //this.session$ = this.authStore.select(selectSessionState)
       this.sessionActive$ = this.authStore.select(selectSessionActive);
       this.userActive$ = this.authStore.select(selectUserActive);
   }
@@ -41,8 +37,6 @@ export class AppComponent implements OnInit {
     let sessionLogout: Session = {
       sessionActive: false
     }
-
-    //this.session.logout(sessionLogout)
     this.session.logout(sessionLogout)
     this.router.navigate(['auth/login'])
   }

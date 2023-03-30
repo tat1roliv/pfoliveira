@@ -9,13 +9,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MaterialModule } from './material.module';
-//import { StudentNamePipe } from './pipes/student-name.pipe';
 import { TitleSizeDirective } from './directives/title-size.directive';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { HomeComponent } from './core/home/home.component';
 import { CoreModule } from './core/core.module';
 import { StoreModule } from '@ngrx/store';
-//import { ROOT_REDUCERS } from './core/state/app.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -25,7 +23,6 @@ import { EffectsModule } from '@ngrx/effects';
         ToolbarComponent,
         NavbarComponent,
         FooterComponent,
-       // StudentNamePipe,
         TitleSizeDirective,
         NotFoundComponent,
         HomeComponent,
@@ -39,7 +36,6 @@ import { EffectsModule } from '@ngrx/effects';
         MaterialModule,
         HttpClientModule,
         CoreModule,
-        //StoreModule.forRoot(ROOT_REDUCERS),
         StoreModule.forRoot({},{}),
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
         EffectsModule.forRoot([]),

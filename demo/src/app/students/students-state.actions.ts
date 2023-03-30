@@ -10,7 +10,6 @@ export const loadedStudents = createAction(
   props<{ students: Student[] }>()
 );
 
-/*update*/
 export const addStudentState = createAction(
   '[StudentsState] Add Student',
   props<{ student: Student }>()

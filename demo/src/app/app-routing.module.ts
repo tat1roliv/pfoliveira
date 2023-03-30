@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanLoad } from '@angular/router';
-
 import { FormStudentComponent } from './core/form-student/form-student.component';
 import { HomeComponent } from './core/home/home.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
-
 import { AuthModule } from './auth/auth.module';
 import { SessionGuard } from './core/guards/session.guard';
-
 
 const routes: Routes = [
 
