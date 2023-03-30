@@ -1,0 +1,27 @@
+<h2 appTitleSize >Students List</h2>
+
+<div class="row" *ngIf="loading$ | async" >
+  <div class="col-md-12">
+      <mat-spinner></mat-spinner>
+  </div>
+</div>
+
+<ul class="px-0" *ngIf="!(loading$ | async)" >
+  <li *ngFor="let student of studentsTemp$ | async" class="card card-edit mb-2 bg-light ">
+    <div class="row d-flex justify-content-center align-items-center p-4 ">
+      <div class="col-12 px-0">
+        <p class="card-text"><strong>Id:</strong> {{ student.id }} </p>
+        <p class="card-text"><strong>Name:</strong> {{ student | studentName }} </p> <!--| studentName -->
+        <p class="card-text"><strong>E-mail:</strong> {{ student.email }} </p>
+        <p class="card-text"><strong>Course:</strong> {{ student.course }} </p>
+      </div>
+      <div class="row mt-3 justify-content-end">
+        <ng-container> <!--*ngIf="session$ | async as session"-->
+          <button  class="col-2 btn btn-primary" (click)="openModalDialog(student)" >Edit</button><!--*ngIf="session.userActive?.isAdmin_"-->
+          <button  class="col-2 btn btn-edit offset-1" (click)="removeStudent(student)" >Remove</button><!--*ngIf="session.userActive?.isAdmin_"-->
+        </ng-container>
+      </div>
+    </div>
+  </li>
+</ul>
+

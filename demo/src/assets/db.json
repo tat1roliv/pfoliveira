@@ -1,0 +1,17 @@
+{
+  "users":[
+      {
+        "userName_": "admin",
+        "email_": "admin@mail.com",
+        "password_": "1234",
+        "isAdmin_": true
+      },
+      {
+        "userName_": "ada",
+        "email_": "ada@mail.com",
+        "password_": "root",
+        "isAdmin_": false
+      }
+  ]
+}
+
