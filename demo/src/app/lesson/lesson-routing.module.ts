@@ -10,8 +10,8 @@ const routes: Routes = [
 
     { path: '', canActivateChild: [ SessionGuard ] , children: [
       { path: 'list', component: LessonsListComponent },
-      { path: 'add', component:LessonsAddComponent , canActivate: [AdminGuard] },// AdminGuard
-      { path: 'edit', component: LessonsEditComponent , canActivate: [AdminGuard] },// AdminGuard
+      { path: 'add', component:LessonsAddComponent , canActivate: [AdminGuard] },
+      { path: 'edit', component: LessonsEditComponent , canActivate: [AdminGuard] },
     ]}
 ];
 

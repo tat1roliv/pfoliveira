@@ -8,7 +8,6 @@ import { concatMap, map } from "rxjs";
 import { Lesson } from "src/app/models/lesson";
 import { loadLessonsStates, loadedLessons } from "./lessons-state.actions";
 import { LessonService } from "./services/lesson.service";
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class LessonsStateEffects {
@@ -73,6 +72,5 @@ export class LessonsStateEffects {
     private lessons: LessonService,
     private actions$: Actions,
     private router: Router,
-    private snackBar: MatSnackBar
   ) {}
 }

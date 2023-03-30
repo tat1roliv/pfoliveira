@@ -1,7 +1,7 @@
 <h2>Add Lesson</h2>
 
 <form [formGroup]="formLessons" (ngSubmit)="lessonsAdd()">
-  <fieldset >
+  <fieldset disabled>
     <div class="mb-2">
         <label class="mb-1" for="disabledTextInput">Id: </label>
         <input value="" type="text"  id="disabledTextInput" name="id" class="form-control" formControlName="id">

@@ -42,11 +42,6 @@ export class LessonsListComponent implements OnInit, OnDestroy {
 
     this.store.dispatch(loadLessonsStates());
 
-    /*
-    this.lessonsService.getLessonsObservable().subscribe((lessons: Lesson[]) => {
-      this.store.dispatch(loadedLessons({ lessons: lessons }));
-    });
-    */
     this.lessonsList$ = this.store.select(selectLoadedLessons);
 
     this.lessonsService.getLessonsObservable();
@@ -58,16 +53,8 @@ export class LessonsListComponent implements OnInit, OnDestroy {
 
     this.store.dispatch(removeLessonState({ lesson }));
 
-    /*
-     this.lessonsService.removeLesson(lesson).subscribe((lesson: Lesson) => {
-      alert(`lesson ${lesson.title}  deleted` );
-      this.lessonsList$ = this.lessonsService.getLessonsObservable();
-     })
-     */
-    
    }
 
-  //updated to dialog
    editLessonRedirect(lesson: Lesson){
      this.router.navigate(['lessons/edit', lesson])
    }
@@ -82,7 +69,6 @@ export class LessonsListComponent implements OnInit, OnDestroy {
   }
 
    ngOnDestroy() {
-
 
    }
 

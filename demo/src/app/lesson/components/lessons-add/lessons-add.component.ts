@@ -47,12 +47,6 @@ export class LessonsAddComponent implements OnInit{
 
     this.store.dispatch(addLessonState({ lesson: lesson }));
 
-    /*
-    this.lessonsService.addLesson(lesson).subscribe((lesson: Lesson) => {
-      alert(`lesson ${lesson.title} added` );
-      this.router.navigate(['lessons/list']);
-    })
-    */
   }
 
 }

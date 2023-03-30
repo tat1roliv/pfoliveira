@@ -20,7 +20,6 @@ export class LessonsEditComponent implements OnInit{
   lessonsList$!: Observable<Lesson[]>;
 
   constructor(
-    //public activatedRoute: ActivatedRoute,
     private lessonsService: LessonService,
     private router: Router,
     private dialogRef: MatDialogRef<LessonsEditComponent>,
@@ -53,11 +52,7 @@ export class LessonsEditComponent implements OnInit{
 
     this.store.dispatch(editLessonState({lesson: lesson}));
     this.dialogRef.close(lesson);
-    /*
-    this.lessonsService.editServLesson(lesson).subscribe((lesson: Lesson) =>{
-      this.dialogRef.close(lesson);
-    })
-    */
+
   }
 
 }
